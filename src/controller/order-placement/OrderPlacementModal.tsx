@@ -14,6 +14,7 @@ import { fetchPost } from "@modules/api/network-service-function-model";
 import { ApiEndPoint } from "@modules/api/api-end-point.enum";
 import { useBasicDataHook } from "@hook/context-providers/basic-data-hook";
 import { LoadingModal } from "@controller/modals/LoadingModal";
+import { exchangeBySymbol } from "@assets/data/stock";
 
 interface OrderPlacementModalProps {
   isOpen: boolean;
@@ -48,7 +49,7 @@ export const OrderPlacementModal = (props: OrderPlacementModalProps) => {
         method: methodType,
         order: "limit/price",
         place: "standard/bid",
-        symbol: "0001",
+        symbol: props.stock?.symbol ?? "",
         price: props.stock?.currbid,
         quantity: mAmount,
       },

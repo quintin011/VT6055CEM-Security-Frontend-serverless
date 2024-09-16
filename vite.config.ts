@@ -12,6 +12,8 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
+      find: './runtimeConfig',
+      replacement: './runtimeConfig.browser',
       "@assets-images": "/src/assets/images",
       "@assets": "/src/assets",
       "@styles": "/src/styles",
@@ -29,5 +31,8 @@ export default defineConfig({
       "@configs": "/src/configs",
       "@helpers": "/src/helpers",
     },
+  },
+  build: {
+    outDir: "build"
   },
 });
