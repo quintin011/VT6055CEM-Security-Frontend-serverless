@@ -25,7 +25,7 @@ const getNeededHeadersData = (response: AxiosResponse): APiHeaderData => {
   const headers = response.headers;
   let result = {};
   if (headers instanceof AxiosHeaders) {
-    const authorization = headers.getAuthorization();
+    const authorization = headers.get('x-amzn-remapped-authorization');
     const xUid = headers.get('X-Uid')
     if (authorization && authorization.toString() != "" && xUid && xUid.toString() != "") {
       result = {
