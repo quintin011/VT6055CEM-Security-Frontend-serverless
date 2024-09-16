@@ -1,0 +1,1 @@
+export type TradeType = 'BUY' | 'SELL'

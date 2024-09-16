@@ -1,0 +1,21 @@
+.text-base {
+  font-size: 16;
+  font-family: "Noto Sans"
+}
+
+.text-medium {
+  font-weight: 500;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-limit-one {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+  
