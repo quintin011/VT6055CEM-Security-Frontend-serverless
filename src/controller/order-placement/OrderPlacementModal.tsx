@@ -49,7 +49,7 @@ export const OrderPlacementModal = (props: OrderPlacementModalProps) => {
         method: methodType,
         order: "limit/price",
         place: "standard/bid",
-        symbol: props.stock?.symbol ?? "",
+        symbol: props.stock?.symbol ? parseInt(props.stock.symbol) : 0,
         price: props.stock?.currbid,
         quantity: mAmount,
       },
